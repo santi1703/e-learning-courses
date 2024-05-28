@@ -96,6 +96,6 @@ class QuestionSeeder extends Seeder
             ],
         ]);
 
-        Question::factory(50)->create();
+//        Question::factory(50)->create();
     }
 }

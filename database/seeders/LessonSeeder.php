@@ -55,6 +55,6 @@ class LessonSeeder extends Seeder
             ],
         ]);
 
-        Lesson::factory(20)->create();
+//        Lesson::factory(20)->create();
     }
 }

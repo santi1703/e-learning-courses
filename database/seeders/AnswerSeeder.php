@@ -171,6 +171,6 @@ class AnswerSeeder extends Seeder
             ],
         ]);
 
-        Answer::factory(200)->create();
+//        Answer::factory(200)->create();
     }
 }

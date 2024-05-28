@@ -44,10 +44,10 @@ class CourseSeeder extends Seeder
             ],
         ]);
 
-        Course::factory(2)->create();
-        Course::factory(2)->create();
-        Course::factory(2)->create();
-        Course::factory(2)->create();
-        Course::factory(2)->create();
+//        Course::factory(2)->create();
+//        Course::factory(2)->create();
+//        Course::factory(2)->create();
+//        Course::factory(2)->create();
+//        Course::factory(2)->create();
     }
 }
