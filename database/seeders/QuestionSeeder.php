@@ -95,5 +95,7 @@ class QuestionSeeder extends Seeder
                 'lesson_id' => 6,
             ],
         ]);
+
+        Question::factory(50)->create();
     }
 }

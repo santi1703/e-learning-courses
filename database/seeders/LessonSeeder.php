@@ -44,15 +44,17 @@ class LessonSeeder extends Seeder
             [
                 'name' => '2d geometric concepts',
                 'course_id' => 2,
-                'previous_id' => 1,
+                'previous_id' => 4,
                 'threshold' => 30,
             ],
             [
                 'name' => '3d geometric concepts',
                 'course_id' => 2,
-                'previous_id' => 2,
+                'previous_id' => 5,
                 'threshold' => 30,
             ],
         ]);
+
+        Lesson::factory(20)->create();
     }
 }

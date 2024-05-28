@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Answer;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AnswerSeeder extends Seeder
 {
@@ -13,6 +14,10 @@ class AnswerSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        Answer::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         Answer::factory()->createMany([
             [
                 'statement' => 'Yes',
@@ -26,7 +31,7 @@ class AnswerSeeder extends Seeder
             ],
             [
                 'statement' => 'Entertain',
-                'correct' => true,
+                'correct' => false,
                 'question_id' => 2
             ],
             [
@@ -165,5 +170,7 @@ class AnswerSeeder extends Seeder
                 'question_id' => 11
             ],
         ]);
+
+        Answer::factory(200)->create();
     }
 }

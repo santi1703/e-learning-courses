@@ -36,8 +36,8 @@ class UserSeeder extends Seeder
                 'role_id' => Role::PROFESSOR,
             ],
             [
-                'name' => 'Abraham Cromwell',
-                'email' => 'abraham_cromwell@elearning.com',
+                'name' => 'Student Cromwell',
+                'email' => 'student_cromwell@elearning.com',
                 'role_id' => Role::STUDENT,
             ],
         ]);

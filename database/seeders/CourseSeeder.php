@@ -43,5 +43,11 @@ class CourseSeeder extends Seeder
                 'previous_id' => 5,
             ],
         ]);
+
+        Course::factory(2)->create();
+        Course::factory(2)->create();
+        Course::factory(2)->create();
+        Course::factory(2)->create();
+        Course::factory(2)->create();
     }
 }

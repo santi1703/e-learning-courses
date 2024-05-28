@@ -18,9 +18,9 @@ class AnswerFactory extends Factory
     public function definition(): array
     {
         return [
-            'statement' => $this->faker->realText(25),
+            'statement' => ucfirst(implode(' ', $this->faker->words(random_int(1, 5)))),
             'correct' => $this->faker->boolean(),
-            'question_id' => Question::inRandomOrder()->limit(1)->pluck('id')->pop(),
+            'question_id' => Question::where('id', '>', 11)->inRandomOrder()->limit(1)->pluck('id')->pop(),
         ];
     }
 }

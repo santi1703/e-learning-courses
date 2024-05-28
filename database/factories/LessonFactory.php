@@ -18,9 +18,9 @@ class LessonFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->realText('50'),
+            'name' => ucfirst(implode(' ', $this->faker->words(random_int(1, 5)))),
             'threshold' => $this->faker->numberBetween(1, 10) * 10,
-            'course_id' => Course::inRandomOrder()->limit(1)->pluck('id')->pop(),
+            'course_id' => Course::where('id', '>', 6)->inRandomOrder()->limit(1)->pluck('id')->pop(),
         ];
     }
 }
